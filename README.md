@@ -35,20 +35,34 @@ GKPageSmoothView是一个可延续滑动的UIScrollView嵌套滑动库
 - 可实现导航栏颜色渐变、头图下拉放大等效果
 - 支持主页下拉刷新、列表页上拉加载
 
+## 1.5.0升级指南
+1.5.0版本之后将GKPageScrollView与GKPageScrollViewSwift合并    
+使用GKPageScrollView的swift版本，需`pod 'GKPageScrollView/Swift'`    
+使用GKPageSmoothView的swift版本，需`pod 'GKPageSmoothView/Swift'`
+
 ## 使用方法
 ### 1、手动安装
 ##### 下载GKPageScrollView demo
-* Objective-C：拖入GKPageScrollView/objc文件夹中的.h和.m文件，#import "GKPageScrollView.h"，开始使用
-* Swift：拖入GKPageScrollView/swift文件夹中的.swift文件，开始使用
+* Objective-C：
+拖入Source/GKPageScrollView文件夹中的.h和.m文件，#import "GKPageScrollView.h"，开始使用   
+拖入Source/GKPageSmoothView文件夹中的.h和.m文件，#import "GKPageSmoothView.h"，开始使用 
+* Swift：
+拖入Source/GKPageScrollViewSwift文件夹中的.swift文件，开始使用   
+拖入Source/GKPageSmoothViewSwift文件夹中的.swift文件，开始使用
 
 ### 2、CocoaPods安装：
-* Objective-C：`pod 'GKPageScrollView'` then `#import <GKPageScrollView.h>`
-* Swift：`pod 'GKPageScrollViewSwift'` then `import GKPageScrollViewSwift`
+* Objective-C：
+`pod 'GKPageScrollView'` then `#import <GKPageScrollView/GKPageScrollView.h>`
+`pod 'GKPageSmoothView'` then `#import <GKPageSmoothView/GKPageSmoothView.h>`
+* Swift：
+`pod 'GKPageScrollView/Swift'` then `import GKPageScrollView`  
+`pod 'GKPageScrollView/Swift'` then `import GKPageScrollView`
 
-如果发现pod search GKPageScrollView/GKPageScrollViewSwift 不是最新版本，在终端执行pod setup命令更新本地spec镜像缓存，重新搜索即可。
+如果发现pod search GKPageScrollView/GKPageSmoothView 不是最新版本，在终端执行pod setup命令更新本地spec镜像缓存，重新搜索即可。
 
 ### 3、Swift Package Manager 安装
-依次点击 Xcode 的菜单 File > Swift Packages > Add Package Dependency，填入 `https://github.com/QuintGao/GKPageScrollView.git`
+依次点击 Xcode 的菜单 File > Swift Packages > Add Package Dependency，填入 `https://github.com/QuintGao/GKPageScrollView.git`  
+然后选择需要的库，GKPageScrollView/GKPageScrollViewSwift/GKPageSmoothView/GKPageSmoothViewSwift
 
 ## 常见问题
 1、headerView出现多个，不要在headerView代理方法中做视图创建、添加等操作  
